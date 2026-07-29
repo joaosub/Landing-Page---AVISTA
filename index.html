@@ -297,6 +297,40 @@
   .sticky-cta .info b{color:var(--amber);font-weight:500}
   .sticky-cta .btn{padding:.85rem 1.4rem;font-size:.74rem}
 
+  /* ---------- phone / whatsapp ---------- */
+  .hero-phone{
+    display:inline-flex;align-items:center;gap:.7rem;margin-top:1.7rem;
+    font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(243,236,221,.82);
+    text-shadow:0 1px 10px rgba(8,14,20,.85);
+  }
+  .hero-phone svg{color:var(--amber);flex-shrink:0}
+  .hero-phone strong{
+    font-family:var(--display);font-weight:500;font-style:italic;text-transform:none;
+    font-size:1.5rem;letter-spacing:.02em;color:var(--amber-soft);
+  }
+  .hero-phone:hover strong{color:var(--amber)}
+
+  .cta-phone{margin-top:2.2rem}
+  .cta-phone .lbl{font-size:.74rem;letter-spacing:.26em;text-transform:uppercase;color:rgba(243,236,221,.6)}
+  .cta-phone a{
+    display:inline-flex;align-items:center;gap:.8rem;margin-top:.7rem;
+    font-family:var(--display);font-weight:400;font-style:italic;
+    font-size:clamp(2.2rem,6vw,3.6rem);letter-spacing:.01em;color:var(--amber-soft);
+  }
+  .cta-phone a svg{width:34px;height:34px}
+  .cta-phone a:hover{color:var(--amber)}
+
+  .fab-wa{
+    position:fixed;right:1.4rem;bottom:1.4rem;z-index:58;
+    display:inline-flex;align-items:center;gap:.65rem;
+    background:var(--amber);color:var(--night-2);
+    padding:.85rem 1.3rem;border-radius:100px;font-weight:600;letter-spacing:.03em;font-size:.92rem;
+    box-shadow:0 12px 34px rgba(8,14,20,.45),0 0 0 6px rgba(231,162,63,.16);
+    transition:transform .3s ease,background .3s ease;
+  }
+  .fab-wa:hover{transform:translateY(-2px);background:var(--amber-soft)}
+  .fab-wa svg{flex-shrink:0}
+
   /* ---------- reveal ---------- */
   .reveal{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
   .reveal.in{opacity:1;transform:none}
@@ -333,6 +367,7 @@
     .locale-img{order:-1;aspect-ratio:4/3}
     .footer-top{flex-direction:column}
     .sticky-cta{display:flex}
+    .fab-wa{display:none}
     body{padding-bottom:64px}
   }
   @media(prefers-reduced-motion:reduce){
@@ -372,6 +407,7 @@
       <a href="https://wa.me/5566999373775?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20reservar%20o%20Chal%C3%A9%20n%C2%BA%201%20do%20AVISTA%20%28Chapada%20dos%20Veadeiros%29.%20Poderia%20me%20passar%20disponibilidade%20e%20valores%3F" target="_blank" rel="noopener" class="btn btn-amber">Reservar agora</a>
       <a href="#chale" class="btn btn-ghost">Conhecer o chalé</a>
     </div>
+    <a class="hero-phone reveal" href="https://wa.me/5566999373775?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20reservar%20o%20Chal%C3%A9%20n%C2%BA%201%20do%20AVISTA%20%28Chapada%20dos%20Veadeiros%29.%20Poderia%20me%20passar%20disponibilidade%20e%20valores%3F" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.22 8.22 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.19 8.19 0 0 1 2.41 5.83c0 4.55-3.7 8.24-8.24 8.24Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43-.14-.01-.31-.01-.48-.01-.17 0-.43.06-.66.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.25 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29Z"/></svg> Fale agora no WhatsApp <strong>(66) 99937-3775</strong></a>
     <div class="hero-chip reveal">
       <span><span class="star">★</span> 4,9 · Avaliação dos hóspedes</span>
       <span class="dot"></span>
@@ -592,6 +628,7 @@
     <h2 class="reveal">Se não hoje, quando?</h2>
     <p class="reveal">O Chalé nº 1 do AVISTA espera por você. Escolha suas datas e viva a Chapada como poucos vivem.</p>
     <a href="https://wa.me/5566999373775?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20reservar%20o%20Chal%C3%A9%20n%C2%BA%201%20do%20AVISTA%20%28Chapada%20dos%20Veadeiros%29.%20Poderia%20me%20passar%20disponibilidade%20e%20valores%3F" target="_blank" rel="noopener" class="btn btn-amber reveal">Reservar pelo WhatsApp</a>
+    <p class="cta-phone reveal"><span class="lbl">ou chame direto no WhatsApp</span><br><a href="https://wa.me/5566999373775?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20reservar%20o%20Chal%C3%A9%20n%C2%BA%201%20do%20AVISTA%20%28Chapada%20dos%20Veadeiros%29.%20Poderia%20me%20passar%20disponibilidade%20e%20valores%3F" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.22 8.22 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.19 8.19 0 0 1 2.41 5.83c0 4.55-3.7 8.24-8.24 8.24Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43-.14-.01-.31-.01-.48-.01-.17 0-.43.06-.66.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.25 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>(66) 99937-3775</a></p>
   </div>
 </section>
 
@@ -615,7 +652,7 @@
           <span>Reservar</span>
           <a href="https://www.airbnb.com.br/rooms/1385517966565956653" target="_blank" rel="noopener">Airbnb — Chalé nº 1</a>
           <a href="#" target="_blank" rel="noopener">Instagram</a>
-          <a href="https://wa.me/5566999373775?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20reservar%20o%20Chal%C3%A9%20n%C2%BA%201%20do%20AVISTA%20%28Chapada%20dos%20Veadeiros%29.%20Poderia%20me%20passar%20disponibilidade%20e%20valores%3F" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://wa.me/5566999373775?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20reservar%20o%20Chal%C3%A9%20n%C2%BA%201%20do%20AVISTA%20%28Chapada%20dos%20Veadeiros%29.%20Poderia%20me%20passar%20disponibilidade%20e%20valores%3F" target="_blank" rel="noopener">WhatsApp&nbsp;·&nbsp;(66)&nbsp;99937-3775</a>
         </div>
       </div>
     </div>
@@ -626,9 +663,12 @@
   </div>
 </footer>
 
+<!-- Floating WhatsApp button (desktop) -->
+<a class="fab-wa" href="https://wa.me/5566999373775?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20reservar%20o%20Chal%C3%A9%20n%C2%BA%201%20do%20AVISTA%20%28Chapada%20dos%20Veadeiros%29.%20Poderia%20me%20passar%20disponibilidade%20e%20valores%3F" target="_blank" rel="noopener" aria-label="Falar no WhatsApp (66) 99937-3775"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.22 8.22 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.19 8.19 0 0 1 2.41 5.83c0 4.55-3.7 8.24-8.24 8.24Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43-.14-.01-.31-.01-.48-.01-.17 0-.43.06-.66.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.25 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29Z"/></svg><span>(66) 99937-3775</span></a>
+
 <!-- ============ STICKY MOBILE CTA ============ -->
 <div class="sticky-cta">
-  <div class="info"><b>★ 4,9</b> · Chalé nº 1 · Chapada</div>
+  <div class="info"><b>(66) 99937-3775</b><br>WhatsApp · Chalé nº 1</div>
   <a href="https://wa.me/5566999373775?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20reservar%20o%20Chal%C3%A9%20n%C2%BA%201%20do%20AVISTA%20%28Chapada%20dos%20Veadeiros%29.%20Poderia%20me%20passar%20disponibilidade%20e%20valores%3F" target="_blank" rel="noopener" class="btn btn-amber">Reservar</a>
 </div>
 
